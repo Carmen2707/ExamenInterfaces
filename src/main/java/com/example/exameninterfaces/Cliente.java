@@ -10,11 +10,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", correo='" + correo + '\'' +
-                '}';
+        return  nombre ;
     }
 
     public Cliente(Long id, String nombre, String correo) {
