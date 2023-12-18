@@ -1,8 +1,8 @@
-.colorTitulo{
+.colorTitulo {
     -fx-text-fill: #002858;
     -fx-effect: dropshadow(gaussian, #002858, 5, 0, 1, 1);
 }
 
-.fondo{
+.fondo {
     -fx-background-color: #002858;
 }

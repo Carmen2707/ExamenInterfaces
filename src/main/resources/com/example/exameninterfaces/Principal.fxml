@@ -1,143 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exameninterfaces.PrincipalController">
-   <top>
-      <HBox alignment="CENTER" styleClass="colorTitulo" stylesheets="@style.css" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/logo_cesur.png" />
-               </image>
-            </ImageView>
-            <Label styleClass="colorTitulo" stylesheets="@style.css" text="Parking CESUR">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="20.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <BorderPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </BorderPane.margin>
-      </HBox>
-   </top>
-   <center>
-      <SplitPane dividerPositions="0.2707" styleClass="fondo" stylesheets="@style.css" BorderPane.alignment="CENTER">
-         <items>
-            <VBox alignment="CENTER">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Nueva entrada" textFill="WHITE">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </Label>
-                  <GridPane hgap="10.0" vgap="15.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="-Infinity" valignment="TOP" vgrow="NEVER" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <DatePicker fx:id="dpEntrada" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Label prefHeight="18.0" prefWidth="82.0" text="Matrícula" textFill="WHITE" GridPane.rowIndex="1" />
-                        <TextField fx:id="txtMatricula" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="Modelo" textFill="WHITE" GridPane.rowIndex="2" />
-                        <ComboBox fx:id="comboModelo" editable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="Cliente" textFill="WHITE" GridPane.rowIndex="3" />
-                        <ComboBox fx:id="comboCliente" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label text="Tarifa" textFill="WHITE" GridPane.rowIndex="4" />
-                        <VBox GridPane.columnIndex="1" GridPane.rowIndex="4">
-                           <children>
-                              <RadioButton fx:id="rbStandard" mnemonicParsing="false" selected="true" text="Standard" textFill="WHITE" />
-                              <RadioButton fx:id="rbOferta" mnemonicParsing="false" text="Oferta" textFill="WHITE" />
-                              <RadioButton fx:id="rbLarga" mnemonicParsing="false" text="Larga duración" textFill="WHITE" />
-                           </children>
-                        </VBox>
-                        <Label text="Entrada" textFill="WHITE" GridPane.rowIndex="5" />
-                        <Label text="Coste" textFill="WHITE" GridPane.rowIndex="7" />
-                        <Label fx:id="lblCoste" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                        <Label text="Salida" textFill="WHITE" GridPane.rowIndex="6" />
-                        <DatePicker fx:id="dpSalida" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </GridPane>
-                  <Button fx:id="btnAñadir" mnemonicParsing="false" onAction="#añadirCoche" text="Añadir a la tabla">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salir" text="Salir de la aplicación">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-               </children>
-            </VBox>
-            <BorderPane>
-               <center>
-                  <TableView fx:id="tabla">
-                    <columns>
-                      <TableColumn fx:id="cMatricula" prefWidth="75.0" text="Matrícula" />
-                      <TableColumn fx:id="cModelo" prefWidth="75.0" text="Modelo" />
-                        <TableColumn fx:id="cEntrega" prefWidth="75.0" text="Fecha de entrada" />
-                        <TableColumn fx:id="cSalida" prefWidth="75.0" text="Fecha de salida" />
-                        <TableColumn fx:id="cCliente" prefWidth="75.0" text="Cliente" />
-                        <TableColumn fx:id="cTarifa" prefWidth="75.0" text="Tarifa" />
-                        <TableColumn fx:id="cCoste" prefWidth="75.0" text="Coste" />
-                    </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                     <BorderPane.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </BorderPane.margin>
-                  </TableView>
-               </center>
-            </BorderPane>
-         </items>
-      </SplitPane>
-   </center>
-   <bottom>
-      <Label fx:id="info" onMouseClicked="#clickInfo" styleClass="colorTitulo" stylesheets="@style.css" text="Aplicación creada por Carmen García Robles" BorderPane.alignment="CENTER" />
-   </bottom>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.exameninterfaces.PrincipalController">
+    <top>
+        <HBox alignment="CENTER" styleClass="colorTitulo" stylesheets="@style.css" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/logo_cesur.png"/>
+                    </image>
+                </ImageView>
+                <Label styleClass="colorTitulo" stylesheets="@style.css" text="Parking CESUR">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets left="20.0"/>
+                    </HBox.margin>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.2707" styleClass="fondo" stylesheets="@style.css" BorderPane.alignment="CENTER">
+            <items>
+                <VBox alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Nueva entrada" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                        </Label>
+                        <GridPane hgap="10.0" vgap="15.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="-Infinity" valignment="TOP" vgrow="NEVER"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <DatePicker fx:id="dpEntrada" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                                <Label prefHeight="18.0" prefWidth="82.0" text="Matrícula" textFill="WHITE"
+                                       GridPane.rowIndex="1"/>
+                                <TextField fx:id="txtMatricula" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                <Label text="Modelo" textFill="WHITE" GridPane.rowIndex="2"/>
+                                <ComboBox fx:id="comboModelo" editable="true" prefWidth="150.0" GridPane.columnIndex="1"
+                                          GridPane.rowIndex="2"/>
+                                <Label text="Cliente" textFill="WHITE" GridPane.rowIndex="3"/>
+                                <ComboBox fx:id="comboCliente" prefWidth="150.0" GridPane.columnIndex="1"
+                                          GridPane.rowIndex="3"/>
+                                <Label text="Tarifa" textFill="WHITE" GridPane.rowIndex="4"/>
+                                <VBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <children>
+                                        <RadioButton fx:id="rbStandard" mnemonicParsing="false" selected="true"
+                                                     text="Standard" textFill="WHITE"/>
+                                        <RadioButton fx:id="rbOferta" mnemonicParsing="false" text="Oferta"
+                                                     textFill="WHITE"/>
+                                        <RadioButton fx:id="rbLarga" mnemonicParsing="false" text="Larga duración"
+                                                     textFill="WHITE"/>
+                                    </children>
+                                </VBox>
+                                <Label text="Entrada" textFill="WHITE" GridPane.rowIndex="5"/>
+                                <Label text="Coste" textFill="WHITE" GridPane.rowIndex="7"/>
+                                <Label fx:id="lblCoste" text="Label" textFill="WHITE" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="7"/>
+                                <Label text="Salida" textFill="WHITE" GridPane.rowIndex="6"/>
+                                <DatePicker fx:id="dpSalida" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </padding>
+                        </GridPane>
+                        <Button fx:id="btnAñadir" mnemonicParsing="false" onAction="#añadirCoche"
+                                text="Añadir a la tabla">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salir"
+                                text="Salir de la aplicación">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+                <BorderPane>
+                    <center>
+                        <TableView fx:id="tabla">
+                            <columns>
+                                <TableColumn fx:id="cMatricula" prefWidth="75.0" text="Matrícula"/>
+                                <TableColumn fx:id="cModelo" prefWidth="75.0" text="Modelo"/>
+                                <TableColumn fx:id="cEntrega" prefWidth="75.0" text="Fecha de entrada"/>
+                                <TableColumn fx:id="cSalida" prefWidth="75.0" text="Fecha de salida"/>
+                                <TableColumn fx:id="cCliente" prefWidth="75.0" text="Cliente"/>
+                                <TableColumn fx:id="cTarifa" prefWidth="75.0" text="Tarifa"/>
+                                <TableColumn fx:id="cCoste" prefWidth="75.0" text="Coste"/>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                            <BorderPane.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                            </BorderPane.margin>
+                        </TableView>
+                    </center>
+                </BorderPane>
+            </items>
+        </SplitPane>
+    </center>
+    <bottom>
+        <Label fx:id="info" onMouseClicked="#clickInfo" styleClass="colorTitulo" stylesheets="@style.css"
+               text="Aplicación creada por Carmen García Robles" BorderPane.alignment="CENTER"/>
+    </bottom>
 </BorderPane>
