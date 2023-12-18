@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679addc4-d36f-4bdf-a248-40bac02a3505" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/exameninterfaces/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/exameninterfaces/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/exameninterfaces/PrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/exameninterfaces/PrincipalController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702898482352</updated>
       <workItem from="1702898483530" duration="9000000" />
-      <workItem from="1702913758801" duration="3898000" />
+      <workItem from="1702913758801" duration="6213000" />
     </task>
     <task id="LOCAL-00001" summary="Commit hecho en clase a las 15:00">
       <option name="closed" value="true" />
@@ -102,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702917579125</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit final en casa">
+      <option name="closed" value="true" />
+      <created>1702917774535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702917774535</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

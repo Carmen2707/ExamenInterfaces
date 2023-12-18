@@ -67,7 +67,6 @@ public class PrincipalController implements Initializable {
         clientes.add(new Cliente(2L, "Jorge", "jorge@gmail.com"));
         clientes.add(new Cliente(3L, "Pepe", "pepe@gmail.com"));
 
-
         ObservableList<String> modelos = FXCollections.observableArrayList();
         modelos.addAll("BMW", "Mercedes", "Ferrari");
         comboModelo.setItems(modelos);
@@ -103,8 +102,6 @@ public class PrincipalController implements Initializable {
 
     @FXML
     public void añadirCoche(ActionEvent actionEvent) {
-
-
         if (!txtMatricula.getText().isEmpty() && comboModelo.getValue() != null &&
                 comboCliente.getValue() != null && dpEntrada.getValue() != null && dpSalida.getValue() != null) {
             Coche c = new Coche();
